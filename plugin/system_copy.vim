@@ -94,20 +94,17 @@ nnoremap <silent> <Plug>SystemCopy :<C-U>set opfunc=<SID>system_copy<CR>g@
 nnoremap <silent> <Plug>SystemCopyLine :<C-U>set opfunc=<SID>system_copy<Bar>exe 'norm! 'v:count1.'g@_'<CR>
 nnoremap <silent> <Plug>SystemPaste :<C-U>call <SID>system_paste()<CR>
 
-if !hasmapto('<Plug>SystemCopy', 'n') || maparg('cp', 'n') ==# ''
-  nmap cp <Plug>SystemCopy
+if !hasmapto('<Plug>SystemCopy') || maparg('zy', 'n') ==# ''
+  nmap zy <Plug>SystemCopy
+  xmap zy <Plug>SystemCopy
 endif
 
-if !hasmapto('<Plug>SystemCopy', 'v') || maparg('cp', 'v') ==# ''
-  xmap cp <Plug>SystemCopy
+if !hasmapto('<Plug>SystemCopyLine') || maparg('zyy', 'n') ==# ''
+  nmap zyy <Plug>SystemCopyLine
 endif
 
-if !hasmapto('<Plug>SystemCopyLine', 'n') || maparg('cP', 'n') ==# ''
-  nmap cP <Plug>SystemCopyLine
+if !hasmapto('<Plug>SystemPaste') || maparg('zp', 'n') ==# ''
+  nmap zp <Plug>SystemPaste
 endif
 
-if !hasmapto('<Plug>SystemPaste', 'n') || maparg('cv', 'n') ==# ''
-  nmap cv <Plug>SystemPaste
-endif
-
-" vim:ts=2:sw=2:sts=2
+" vim:set et sw=2:
