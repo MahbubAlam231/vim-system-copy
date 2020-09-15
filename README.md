@@ -14,7 +14,7 @@ System copy provides a mapping to copy to the system clipboard using a motion
 or visual selection. It also provides a mapping for pasting from the system
 clipboard.
 
-The default mapping is `zy`, and can be followed by any motion or text
+The default mapping is `zy` (<code>sy**z**tem **y**ank</code>), and can be followed by any motion or text
 object. For instance:
 
 - `zyiw` => copy word into system clipboard
@@ -22,7 +22,7 @@ object. For instance:
 
 In addition, `zyy` is mapped to copy the current line directly.
 
-The sequence `zp` is mapped to paste the content of system clipboard to the
+The sequence `zp` (<code>sy**z**tem **p**aste</code>) is mapped to paste the content of system clipboard to the
 next line.
 
 Clipboard Utilities
